@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Journal</title>
+    <link rel=”stylesheet” href=”main.css”>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="mylogo.png" alt="Marcy's Daily Coding Journal">
+    </header>
+    <h2>Daily Journal</h2>
+    <form action="">
+        <fieldset class="boxes">
+            <label for="journalDate">Date of Entry</label>
+            <input type="date" name="journalDate" id="journalDate">
+        </fieldset>
+        <br>
+        <br>
+        <h2>Concepts Covered</h2>
+        <fieldset>
+            <label for="conceptsCovered">Primary</label>
+            <input type="text" name="conceptsCovered" id="conceptsCovered">
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="conceptsCovered">Seconday</label>
+            <input type="text" name="conceptsCovered" id="conceptsCovered">
+        </fieldset>
+        <br>
+        <h2>Daily Journal & Notes</h2>
+        <fieldset>
+            <label for="journalEntry">Journal Entry</label>
+            <input type="textarea" name="textArea" id="textArea">
+        </fieldset>
+        <br>
+        <br>
+        <h2>Mood Variation</h2>
+        <fieldset>
+            <label for="moodVariation">Morning</label>
+            <select name="mood" id="mood">
+                <option value="excited">Excited</option>
+                <option value="content">Content</option>
+                <option value="anxious">Anxious</option>
+                <option value="overwhelmed">Overwhelmed</option>
+            </select>
+        </fieldset>
+        <fieldset>
+                <label for="moodVariation">Evening</label>
+            <select name="mood" id="mood">
+                <option value="content">Content</option>
+                <option value="mellow">Mellow</option>
+                <option value="overworked">Overworked</option>
+                <option value="disillusioned">Disillusioned</option>
+            </select>
+        </fieldset>
+            <br>
+            <br>
+            <h2>Daily Achievements</h2>
+        <fieldset>
+            <label for="achievements">Item #1</label>
+            <input type="text">
+        </fieldset>
+        <fieldset>
+            <label for="achievements">Item #2</label>
+            <input type="text">
+        </fieldset>
+        <br>
+        <br>
+        <h2>Level of Understanding</h2>
+        <h3>0 = None  5 = Excellent</h3>
+        <fieldset>
+            <label for="levelOfUnderstanding">0 to 5</label>
+            <input type="number" id="quantity" name="quantity" min="0" max="5">
+        </fieldset>
+        <br>
+        <br>
+        <fieldset>
+            <label for="submit">Record Entry</label>
+            <input type="submit">
+        </fieldset>
+
+
+
+
+    </form>
+</body>
+</html>

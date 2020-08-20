@@ -1,0 +1,10 @@
+body {
+    color: midnightblue;
+    background-color: gray;
+    font-family: 'Fredoka One', cursive; 
+}
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+}
