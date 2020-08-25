@@ -1,10 +1,20 @@
 body {
-    color: midnightblue;
-    background-color: gray;
+    color: blue;
+    background-color: white;
     font-family: 'Fredoka One', cursive; 
 }
 
-.boxes {
+.fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+#entryLog {
+    display: flex;
+    flex-direction: column;
+}
+
+.journalEntry {
     display: flex;
     flex-direction: column;
 }
