@@ -23,14 +23,14 @@
         
         <fieldset>
             <label for="conceptsCovered">Primary</label>
-            <input type="text" name="conceptsCovered" id="conceptsCovered">
+            <input type="text" name="primConcept" id="primCovered">
         </fieldset>
         
         <br>
         
         <fieldset>
             <label for="conceptsCovered">Seconday</label>
-            <input type="text" name="conceptsCovered" id="conceptsCovered">
+            <input type="text" name="secConcept" id="secCovered">
         </fieldset>
        
         <br>
@@ -46,8 +46,10 @@
         <h2>Mood Variation</h2>
         <fieldset>
             <label for="moodVariation">Morning</label>
-            <select class="amMood" name="mood" id="mood">
+            <select class="amMood" name="startMood" id="firstMood">
                 <option value="excited">Excited</option>
+                <option value="happy">Happy</option>
+                <option value="relaxed">Relaxed</option>
                 <option value="content">Content</option>
                 <option value="anxious">Anxious</option>
                 <option value="overwhelmed">Overwhelmed</option>
@@ -55,7 +57,7 @@
         </fieldset>
         <fieldset>
                 <label for="moodVariation">Evening</label>
-            <select class="pmMood" name="mood" id="mood">
+            <select class="pmMood" name="endMood" id="lastMood">
                 <option value="happy">Happy</option>
                 <option value="relieved">Relieved</option>
                 <option value="content">Content</option>
@@ -98,9 +100,9 @@
        </form>
        <section id="entryLog">
            <h2>Previous Journal Entries</h2>
-           <input type="text" value="entry">
+           <input type="text">
        </section>
-    <footer>&copy; 2020 Marcy's Daily Cody Journal</footer>
+    <footer>&copy; 2020 Marcy's Daily Coding Journal</footer>
     <script type="module" src="./scripts/main.js>   
 </body>
 

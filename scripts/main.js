@@ -12,4 +12,5 @@ for (const entry of allTheEntries) {
 }
 // JournalEntryList();
 // JournalEntryComponent();
-EntryListComponent()
+EntryListComponent();
+// useJournalEntries();
