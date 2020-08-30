@@ -1,3 +1,4 @@
+  
 /*
  *  Purpose:
  *    To render as many journal entry components as
@@ -8,21 +9,17 @@ import { useJournalEntries } from "./JournalDataProvider.js"
 import { JournalEntryComponent } from "./JournalEntry.js"
 
 // DOM reference to where all entries will be rendered
-const entryLog = document.querySelector("#entryLog")
+const entryLog = document.querySelector("#entryLog") 
 
 export const EntryListComponent = () => {
     // Use the journal entry data from the data provider component
     const entries = useJournalEntries()
-    // ERROR:I had journalHTMLRepresentations on the line below.
-    let journalHTMLRepresentation = "";
+
     for (const entry of entries) {
-        journalHTMLRepresentation += JournalEntryComponent(entry);
         /*
             Invoke the component that returns an
             HTML representation of a single entry
         */
-        entryLog.innerHTML += `${journalHTMLRepresentation}`;
-        
+        entryLog.innerHTML += JournalEntryComponent(entry)
     }
 }
-useJournalEntries()

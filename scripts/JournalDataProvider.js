@@ -1,3 +1,4 @@
+  
 /*
  *   Journal data provider for Daily Journal application
  *
@@ -57,6 +58,7 @@ const journal = [
         understanding: 5
     }
     
+
 ]
 
 /*
