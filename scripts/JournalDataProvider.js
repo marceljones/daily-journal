@@ -32,35 +32,20 @@ const journal = [
         achievement1: "I made the right purchase",
         achievement2: "n/a",
         understanding: 5
-    },
-    {
-        id: 3,
-        date: "08/12/2020",
-        primary: "Class Schedule",
-        secondary: "Holidays",
-        entry: "Student Orientation",
-        amMood: "excited",
-        pmMood: "content",
-        achievement1: "n/a",
-        achievement2: "n/a",
-        understanding: 5
-    },
-    {
-        id: 4,
-        date: "08/13/2020",
-        primary: "Pre-work Session",
-        secondary: "Codecademy",
-        entry: "Completion rate",
-        amMood: "excited",
-        pmMood: "content",
-        achievement1: "n/a",
-        achievement2: "n/a",
-        understanding: 5
     }
     
 
 ]
+// const eventHub = document.querySelector("#entryLog")
 
+// const dispatchStateChangeEvent = () => {
+//     const entryStateChangedEvent = new CustomEvent("entryStateChanged")
+//     eventHub.dispatchEvent(noteStateChangedEvent)
+// }
+
+// const newEntry = () => {
+
+// }
 /*
     You export a function that provides a version of the
     raw data in the format that you want
@@ -72,3 +57,4 @@ export const useJournalEntries = () => {
     )
     return sortedByDate
 }
+

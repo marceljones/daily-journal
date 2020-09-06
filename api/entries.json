@@ -1,0 +1,28 @@
+{
+  "entries": [
+    {
+      "id": 4,
+      "date": "08/13/2020",
+      "primary": "Pre-work Session",
+      "secondary": "Codecademy",
+      "entry": "Completion rate",
+      "amMood": "excited",
+      "pmMood": "content",
+      "achievement1": "n/a",
+      "achievement2": "n/a",
+      "understanding": 5
+    },
+    {
+      "date": "08/13/2020",
+      "primary": "Working with JSON",
+      "secondary": "API's",
+      "entry": "Completion rate",
+      "amMood": "excited",
+      "pmMood": "excited",
+      "achievement1": "good",
+      "achievement2": "great",
+      "understanding": 5,
+      "id": 5
+    }
+  ]
+}
