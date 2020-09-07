@@ -1,7 +1,11 @@
   
+import { EntryForm, JournalFormComponent } from "./JournalForm.js"
 import { useJournalEntries } from "./JournalDataProvider.js"
 import { EntryListComponent } from "./JournalEntryList.js"
 
 
-console.log(useJournalEntries())
+
+
+JournalFormComponent()
+EntryForm()
 EntryListComponent()
