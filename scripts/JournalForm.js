@@ -1,29 +1,68 @@
-import { saveJournalEntry } from "./JournalDataProvider.js";
+import { getEntries, useEntries } from "./JournalDataProvider.js";
+import { saveEntry } from "./JournalDataProvider.js";
 
-const contentTarget = document.querySelector(".form-container");
-const eventHub = document.querySelector.apply("container")
+const eventHub = document.querySelector(".container")
+const contentTarget = document.querySelector(".entryLog");
 
-const JournalFormComponent = () => {
-    contentTarget.innerHTML = `
-    <form action="">
+eventHub.addEventListener("click", clickEvent => {
+    clickEvent.preventDefault();
+    if (clickEvent.target.id === "saveEntry") {
+        const entryDate = document.querySelector("#journalDate");
+        const entryPrimary = document.querySelector("#primCovered");
+        const entrySeconday = document.querySelector("#secCovered");
+        const entryEntry = document.querySelector("#journalEntry");
+        const entryAmMood = document.querySelector("#amMood");
+        const entryPmMood = document.querySelector("#pmMood");
+        const entryAchievement1 = document.querySelector("#achievement1");
+        const entryAchievement2 = document.querySelector("#achievement2");
+        const entryUnderstanding = document.querySelector("#understanding");
+        
+        if (entryPrimary.value !== "0" ) {
+            const newEntry = {
+                date: entryDate.value, 
+                primary: entryPrimary.value, 
+                secondary: entrySecondary.value,
+                entry: entryEntry.value, 
+                amMood: entryAmMood.value, 
+                pmMood: entryPmMood.value,
+                achievement1:entryAchievement1.value, 
+                achievement2:entryAchievement2.value,
+                understanding: entryUnderstanding.value
+            }
+            saveEntry(newEntry);
+            render();
+        } else {
+            window.alert("Please complete your journal");
+        }
+    }
+})
+    
+    const render = () => {
+        contentTarget.innerHTML = `     
+        <form>
         <h2>Marcy's Daily Coding Journal</h2>
         <fieldset>
             <label for="journalDate">Date of Entry</label>
             <input type="date" name="journalDate" id="journalDate">
         </fieldset>
-        h2>Concepts Covered</h2>
+        <br>
+        <br>
+        <h2>Concepts Covered</h2>
+        
         <fieldset>
             <label for="conceptsCovered">Primary</label>
-            <input type="text" name="primConcept" id="primCovered" value="primary">
+            <input type="text" name="primConcept" id="primCovered">
         </fieldset>
         <fieldset>
-            <label for="conceptsCovered">Seconday</label>
+            <label for="conceptsCovered">Secondary</label>
             <input type="text" name="secConcept" id="secCovered">
         </fieldset>
+        <br>
         <h2>Daily Journal & Notes</h2>
+        
         <fieldset>
             <label for="journalEntry">Journal Entry</label>
-            <textarea name="text" name="journalEntry" id="journalEntry" value="entries"></textarea>
+            <textarea name="text" name="journalEntry" id="journalEntry" cols="70" rows="10"></textarea>
         </fieldset>
             <h2>Mood Variation</h2>
         <fieldset>
@@ -72,48 +111,28 @@ const JournalFormComponent = () => {
         </fieldset>
         </div>
         <fieldset>
-            <label for="journalSubmit">Record Entry</label>
-            <input type="submit" name="journalSubmit" id="journalSubmit value="Record Journal Entry>
+            <label for="saveEntry">Record Entry</label>
+            <input type="submit" name="saveEntry" id="saveEntry value="Record Journal Entry>
         </fieldset>
         </form>
         `
-        // const entryContent = document.querySelector("#entryForm--text")
-}
+    }
 
-eventHub.addEventListener("change", event => {
-    event.preventDefault();
-    if (event.target.id === "journalSubmit") {
-        if (document.getElementById("primCovered").value === "primary" || document.getElementById("journalEntry").value == "Entries") {
-            window.alert("Please complete your entry!");
-          } else {
-            // Build a new object representation of a journal entry.
-            const newEntry = {
-              // Add your key and value pairs here
-              text: document.getElementById("entry-text").value,
-              date: Date.now(),
-            };
-      
-            // Change API state and application state
-            saveEntry(newEntry);
-          }
-        }
-      });
+
+
+
+
+
+export const JournalFormComponent = () => {
+    getEntries()
+    .then(() => {
+        render(useEntries())
+    })
+}
     
 
-// const render = () => {
-//     contentTarget.innerHTML = `
-//        <h3>New Entry Details</h3>
-//        <section id="entry--${entry.id}" class="journalEntry">
-//        ${entry.date}: ${entry.primary} - ${entry.secondary} - 
-//        ${entry.amMood} - ${entry.pmMood} - ${entry.achievement1} - 
-//        ${entry.achievement2} - ${entry.understanding}
-//    </section>
-//    button id="saveNote">Save Note</button>
-//    `
-// }
-// export const EntryForm = () => {
-//     render();
-//     }
+
+
 
 
 
@@ -130,7 +149,6 @@ eventHub.addEventListener("change", event => {
 		
 
 			
-
 
 
 

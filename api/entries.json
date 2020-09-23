@@ -1,40 +1,24 @@
 {
   "entries": [
     {
-      "id": 1,
-      "date": "08/13/2020",
-      "primary": "Pre-work Session",
-      "secondary": "Codecademy",
-      "entry": "Completion rate",
-      "amMood": "excited",
-      "pmMood": "content",
-      "achievement1": "I'm here.",
-      "achievement2": "I'm learning.",
-      "understanding": 5
-    },
-    {
-      "id": 2,
       "date": "08/13/2020",
       "primary": "Working with JSON",
-      "secondary": "API's",
+      "secondary": "whatever",
       "entry": "Completion rate",
       "amMood": "excited",
-      "pmMood": "excited",
-      "achievement1": "good",
-      "achievement2": "great",
-      "understanding": 5
-    },
-    {
-      "date": "08/13/2020",
-      "primary": "Working with JSON",
-      "secondary": "API's",
-      "entry": "Completion rate",
-      "amMood": "excited",
-      "pmMood": "excited",
-      "achievement1": "good",
-      "achievement2": "great",
-      "understanding": 5,
-      "id": 3
+      "pmMood": "relaxed",
+      "achievement1": "json",
+      "achievement2": "DOM",
+      "understanding": "4",
+      "id": 1
     }
   ]
 }
+      
+      
+    
+    
+      
+  
+   
+  
