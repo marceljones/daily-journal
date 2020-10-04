@@ -3,6 +3,13 @@ body {
     background-color: white;
     font-family: 'Fredoka One', cursive; 
 }
+.mylogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid blue;
+    padding: 2px;
+}
 
 .fieldset {
     display: flex;

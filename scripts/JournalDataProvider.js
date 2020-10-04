@@ -5,59 +5,49 @@
 // *      the entries for different purposes.
 // * This is the original data.
 
+const eventHub = document.querySelector(".hubEvent");
 
-let entries = [];
+let journalEntries = [];
 
-const eventHub = document.querySelector(".container");
 
 const dispatchStateChangeEvent = () => {
-    const entryStateChangedEvent = new CustomEvent("entryStateChanged");
+   eventHub.dispatchEvent(new CustomEvent("entryStateChanged"));
+}
+    
 
-    eventHub.dispatchEvent(entryStateChangedEvent);
+export const useEntries = () => {
+    const sortedByDate = journalEntries.sort(
+        (currentEntry, nextEntry) =>
+            Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
+    )
+    return sortedByDate
 };
-
     
 export const getEntries = () => {
     return fetch("http://localhost:8088/entries") //Fetch from the API
         .then(response => response.json())
         .then(parsedEntries => {
-          entries = parsedEntries;
-          return entries;
+          journalEntries = parsedEntries;
+          return journalEntries;
         });        
       };        
 
       
         
-      export const useEntries = () => {
-          const sortedByDate = entries.sort(
-              (currentEntry, nextEntry) =>
-                  Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
-          )
-          return sortedByDate
-      };
       
-export const saveEntry = entry => {
+export const saveEntry = newJournalEntry => {
         return fetch("http://localhost:8088/entries", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(newEntry)
+            body: JSON.stringify(newJournalEntry)
         })
         .then(getEntries) 
-        
+
+        //This will broadcast the state change event
         .then(dispatchStateChangeEvent)
     }
 
-    export const deleteEntry = id => {
-        return fetch(`http://localhost:8088/entries/${id}`, {
-                method: "DELETE"
-            })
-            .then(getEntries)
-            .then(dispatchStateChangeEvent);
-    };
-/*
-    You export a function that provides a version of the
-    raw data in the format that you want
-*/
+ 
 

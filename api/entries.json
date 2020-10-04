@@ -7,18 +7,18 @@
       "entry": "Completion rate",
       "amMood": "excited",
       "pmMood": "relaxed",
-      "achievement1": "json",
-      "achievement2": "DOM",
       "understanding": "4",
       "id": 1
+    },
+    {
+      "date": "2020-10-04",
+      "primary": "Saving ",
+      "secondary": "Deleting",
+      "entry": "Can save entries to API & DOM",
+      "amMood": "happy",
+      "pmMood": "happy",
+      "understanding": null,
+      "id": 2
     }
   ]
 }
-      
-      
-    
-    
-      
-  
-   
-  

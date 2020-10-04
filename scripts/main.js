@@ -2,6 +2,7 @@
 import { JournalFormComponent } from "./JournalForm.js"
 
 import { EntryListComponent } from "./JournalEntryList.js"
+// import { saveEntry } from "./JournalDataProvider.js"
 
 
 
@@ -12,3 +13,4 @@ import { EntryListComponent } from "./JournalEntryList.js"
 
 EntryListComponent()
 JournalFormComponent()
+// saveEntry()
